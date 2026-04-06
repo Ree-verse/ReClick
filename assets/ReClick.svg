@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <defs>
+    <!-- Background -->
+    <linearGradient id="bg" x1="0" y1="0" x2="256" y2="256" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#111827" />
+      <stop offset="100%" stop-color="#030712" />
+    </linearGradient>
+
+    <!-- Gradient for the mouse body -->
+    <linearGradient id="body" x1="76" y1="44" x2="76" y2="212" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#374151" />
+      <stop offset="100%" stop-color="#1F2937" />
+    </linearGradient>
+
+    <!-- Green gradient highlighting the active left click -->
+    <linearGradient id="active" x1="76" y1="44" x2="128" y2="108" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#10B981" />
+      <stop offset="100%" stop-color="#047857" />
+    </linearGradient>
+
+    <!-- Shadow for depth -->
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#000000" flood-opacity="0.6" />
+    </filter>
+
+    <!-- Geometric clipping -->
+    <clipPath id="mouse-clip">
+      <rect x="76" y="44" width="104" height="168" rx="52" />
+    </clipPath>
+  </defs>
+
+  <!-- Application Icon Base (Squircle) -->
+  <rect width="256" height="256" rx="60" fill="url(#bg)" />
+
+  <!-- Mouse Shadow Layer -->
+  <rect x="76" y="44" width="104" height="168" rx="52" fill="#000000" filter="url(#shadow)" />
+
+  <g clip-path="url(#mouse-clip)">
+    <!-- Main Mouse Body -->
+    <rect x="76" y="44" width="104" height="168" fill="url(#body)" />
+
+    <!-- Active Left Button -->
+    <rect x="76" y="44" width="52" height="64" fill="url(#active)" />
+
+    <!-- Button Split Lines -->
+    <path d="M 76 108 H 180 M 128 44 V 108" stroke="#030712" stroke-width="6" fill="none" />
+
+    <!-- Scroll Wheel -->
+    <rect x="122" y="62" width="12" height="32" rx="6" fill="#030712" />
+  </g>
+</svg>
