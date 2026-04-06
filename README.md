@@ -14,7 +14,7 @@ ReClick lets you automate mouse clicks with a clean desktop UI, configurable int
 
 ## Preview
 
-
+https://github.com/user-attachments/assets/2dac0445-383f-4fa8-86ff-370bc7e0de7e
 
 ## Features
 
