@@ -12,7 +12,7 @@ BUILD_DIR := build
 
 # Check if the icon exists, otherwise PyInstaller will throw an error
 # Only apply icon on Windows
-ICON_FLAG = $(shell if [ -f "$(ICON_FILE)" ] && [ "$(OS)" = "Windows_NT" ]; then echo "--icon=$(ICON_FILE)"; fi)
+ICON_FLAG = $(shell if [ -f "$(ICON)" ] && [ "$(OS)" = "Windows_NT" ]; then echo "--icon=$(ICON)"; fi)
 
 .PHONY: install build clean
 
