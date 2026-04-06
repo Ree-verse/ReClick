@@ -109,6 +109,8 @@ HOTKEYS = {
 - Global hotkeys work even when the app is not focused.
 - On some Linux, `keyboard` and `mouse` may require **root permissions**.
 - On Linux, the app uses dark mode by default because automatic theme detection may not work properly.
+- Due to Windows system timer limitations, the absolute fastest click rate is about 60-65 clicks per second (~15.6ms delay). Setting the interval to 1ms will run at this maximum speed, not 1,000 clicks per second.
+- If you accidentally type text (like "abc") into the number fields, the app won't crash. It will safely ignore the text and use a default value (like 0 or 1) in the background.
 
 ## Support
 

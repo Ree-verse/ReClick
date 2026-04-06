@@ -223,12 +223,17 @@ class ReClick(ctk.CTk):
     def _pick_location(self):
         if self._running:
             return
+        self._picker_active = True
         self._pos_var.set("fixed")
         self.withdraw()
 
         def _wait_for_click():
             time.sleep(0.4)
+            if not self._picker_active:
+                return
             mouse.wait(button="left", target_types=("down",))
+            if not self._picker_active:
+                return
             x, y = mouse.get_position()
             self.after(0, lambda: self._finish_pick(x, y))
 
@@ -313,6 +318,7 @@ class ReClick(ctk.CTk):
 
     def _on_close(self):
         self._running = False
+        self._picker_active = False
         keyboard.unhook_all()
         self.destroy()
 
