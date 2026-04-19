@@ -246,7 +246,6 @@ class ReClick(ctk.CTk):
         self.deiconify()
 
     # Button state
-
     def _set_buttons(self, active: bool):
         def _apply():
             self._start_btn.configure(
@@ -262,7 +261,6 @@ class ReClick(ctk.CTk):
             pass  # window already destroyed
 
     # Interruptible sleep
-
     def _sleep(self, seconds: float):
         """Sleep in small chunks so stop responds instantly."""
         deadline = time.perf_counter() + seconds
@@ -315,7 +313,6 @@ class ReClick(ctk.CTk):
         self._set_buttons(active=False)
 
     # Cleanup
-
     def _on_close(self):
         self._running = False
         self._picker_active = False
