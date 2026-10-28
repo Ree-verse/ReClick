@@ -45,7 +45,6 @@ class ReClick(ctk.CTk):
         self.protocol("WM_DELETE_WINDOW", self._on_close)
 
     # UI Construction
-
     def _build_ui(self):
         fw = {"padx": 16, "sticky": "ew", "pady": (2, 0)}
 

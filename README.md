@@ -112,6 +112,10 @@ HOTKEYS = {
 - Due to Windows system timer limitations, the absolute fastest click rate is about 60-65 clicks per second (~15.6ms delay). Setting the interval to 1ms will run at this maximum speed, not 1,000 clicks per second.
 - If you accidentally type text (like "abc") into the number fields, the app won't crash. It will safely ignore the text and use a default value (like 0 or 1) in the background.
 
+## Code note
+
+Certain functions and variables are intentionally only used once, for readability purposes.
+
 ## Support
 
 If you have questions, suggestions, or want to hang out with other developers, join my Discord server: [Ree-verse GitHub Support](https://discord.gg/ZZfqH9Z4uQ).
